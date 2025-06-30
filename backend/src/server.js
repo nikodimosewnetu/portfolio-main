@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://your-frontend-domain.com', // <-- Add your deployed frontend URL here
+  origin: 'https://portfolio-main-six-ochre.vercel.app', // <-- Add your deployed frontend URL here
   credentials: true,
 }));
 app.use(express.json());
