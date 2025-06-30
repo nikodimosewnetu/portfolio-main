@@ -1,0 +1,93 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, #23243a 0%, #2d3250 100%);
+  --bg-gradient-animated: linear-gradient(270deg, #23243a, #2d3250, #6ee7b7, #4f46e5, #23243a);
+  --fg: #f7f7fa;
+  --accent: #6ee7b7;
+  --accent-hover: #4f46e5;
+  --border: #353a5a;
+  --font-main: 'Space Grotesk', 'Inter', 'Segoe UI', Arial, sans-serif;
+  --radius: 18px;
+  --shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  color: var(--fg);
+  background: var(--bg-gradient-animated);
+  background-size: 400% 400%;
+  animation: gradientMove 18s ease-in-out infinite;
+  letter-spacing: 0.01em;
+  transition: background 0.3s, color 0.3s;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+button, .btn {
+  background: var(--accent);
+  color: #23243a;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.7em 1.6em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: var(--shadow);
+}
+button:hover, .btn:hover {
+  background: var(--accent-hover);
+  color: #fff;
+  box-shadow: 0 8px 36px #4f46e544;
+  transform: translateY(-2px) scale(1.04);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', var(--font-main);
+  font-weight: 800;
+  margin: 0.5em 0 0.2em 0;
+  color: var(--fg);
+  letter-spacing: 0.01em;
+}
+
+section {
+  margin: 2.5rem auto;
+  max-width: 900px;
+  padding: 2.5rem 1.7rem;
+  background: rgba(35,36,58,0.72);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1.5px solid rgba(110,231,183,0.12);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--bg-gradient);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 8px;
+} 
