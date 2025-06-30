@@ -1,4 +1,4 @@
-export const API_BASE_URL = "https://your-backend.onrender.com";
+export const API_BASE_URL = "https://portfolio-main-3.onrender.com";
 
 import axios from "axios";
 
